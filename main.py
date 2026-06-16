@@ -19,7 +19,7 @@ def defence(c_name, char_class):
         return (f'{c_name} блокировал {10 + randint(2, 5)} урона')
 
 
-def special(c_name, char_class):
+def special(c_name, char_class) -> str:
     if char_class == 'warrior':
         return (f'{c_name} применил специальное умение'
                 '«Выносливость {80 + 25}»')
@@ -27,7 +27,8 @@ def special(c_name, char_class):
         return (f'{c_name} применил специальное умение «Атака {5 + 40}»')
     if char_class == 'healer':
         return (f'{c_name} применил специальное умение «Защита {10 + 30}»')
-
+    else:
+        return 'some'
 
 def start_training(c_name, char_class):
     if char_class == 'warrior':
